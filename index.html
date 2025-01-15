@@ -4,10 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Scheme Generator</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- END GOOGLE FONTS -->
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Color Scheme Generator</h1>
+    <header>
+      <input type="color" name="clr-type" id="clr-type" />
+      <select id="mode-type">
+        <!-- <option value="">Select Color Mode</option> -->
+        <option value="monochrome" >Monochrome</option>
+        <option value="monochrome-dark">Monochrome-dark</option>
+        <option value="monochrome-light">Monochrome-light</option>
+        <option value="analogic">Analogic</option>
+        <option value="complement">Complement</option>
+        <option value="analogic-complement">Analogic-complement</option>
+        <option value="triad">Triad</option>
+      </select>
+      <button type="button" id="color-btn">Get color scheme</button>
+    </header>
+
+    <main></main>
 
     <script src="index.js"></script>
   </body>

@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Basic Styles  */
+body {
+  font-family: Inter, serif;
+  background-color: #1f2937;
+}
+
+header {
+  border: 1px solid blue;
+  padding: 1.5em 0.875em; /* 24px 14px */
+}
+
+input[type="color"] {
+  cursor: pointer;
+  height: 37px;
+  width: 61px;
+}
+
+select {
+  appearance: none;
+  background-color: #1f293a;
+  background-image: url("images/selector.png");
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  border: 1px solid gray;
+  color: #d5d4d8;
+  width: 312px;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 1.5; /* 24 */
+  padding: 0.5625em 0.8125em;
+}
+
+.selected {
+  font-weight: 600;
+  position: relative;
+}
+
+.selected::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("images/check.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
