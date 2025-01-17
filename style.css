@@ -11,15 +11,28 @@ body {
   background-color: #1f2937;
 }
 
-header {
-  border: 1px solid blue;
+header .wrapper {
+  display: flex;
+  gap: 0.8125em;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
   padding: 1.5em 0.875em; /* 24px 14px */
 }
 
 input[type="color"] {
   cursor: pointer;
-  height: 37px;
+  height: auto;
   width: 61px;
+  vertical-align: bottom;
+}
+
+button,
+option,
+select {
+  cursor: pointer;
 }
 
 select {
@@ -31,11 +44,22 @@ select {
   border-radius: 6px;
   border: 1px solid gray;
   color: #d5d4d8;
-  width: 312px;
-  cursor: pointer;
   font-family: inherit;
   line-height: 1.5; /* 24 */
+  outline: none;
   padding: 0.5625em 0.8125em;
+  width: 312px;
+}
+
+button {
+  background-color: #3d4b60;
+  color: #fff;
+  font-family: inherit;
+  line-height: 1;
+  padding: 0.8125em 0.6875em;
+  border: none;
+  outline: none;
+  border-radius: 4px;
 }
 
 .selected {
@@ -53,4 +77,68 @@ select {
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.img-container {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.loader {
+  width: 40px;
+}
+
+@media only screen and (min-width: 600px) {
+  .loader {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+/* Layout */
+#color-wrapper {
+  display: grid;
+  gap: 1em;
+  /* margin-top: 1.25em; 20px */
+}
+
+@media only screen and (min-width: 600px) {
+  #color-wrapper {
+    gap: 0;
+    grid-template-columns: repeat(5, 110px);
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.inner-container {
+  height: calc(100% - 30px);
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    height: 600px;
+  }
+}
+
+.color-code {
+  font-size: 0.75rem;
+  color: #d5d4d8;
+  position: absolute;
+  bottom: 6%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .color-code {
+    bottom: 1.5%;
+  }
 }

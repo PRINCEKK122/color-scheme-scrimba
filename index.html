@@ -17,21 +17,25 @@
   </head>
   <body>
     <header>
-      <input type="color" name="clr-type" id="clr-type" />
-      <select id="mode-type">
-        <!-- <option value="">Select Color Mode</option> -->
-        <option value="monochrome" >Monochrome</option>
-        <option value="monochrome-dark">Monochrome-dark</option>
-        <option value="monochrome-light">Monochrome-light</option>
-        <option value="analogic">Analogic</option>
-        <option value="complement">Complement</option>
-        <option value="analogic-complement">Analogic-complement</option>
-        <option value="triad">Triad</option>
-      </select>
-      <button type="button" id="color-btn">Get color scheme</button>
+      <div class="wrapper">
+        <input type="color" name="clr-type" id="clr-type" />
+        <select id="mode-type">
+          <!-- <option value="">Select Color Mode</option> -->
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome-dark</option>
+          <option value="monochrome-light">Monochrome-light</option>
+          <option value="analogic">Analogic</option>
+          <option value="complement">Complement</option>
+          <option value="analogic-complement">Analogic-complement</option>
+          <option value="triad">Triad</option>
+        </select>
+        <button type="button" id="color-btn">Get color scheme</button>
+      </div>
     </header>
 
-    <main></main>
+    <main class="color-container" id="color-container">
+      <div class="wrapper" id="color-wrapper"></div>
+    </main>
 
     <script src="index.js"></script>
   </body>
